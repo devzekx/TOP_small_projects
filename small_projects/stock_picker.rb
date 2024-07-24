@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 def stock_picker(prices)
+  p (0...prices.size).to_a
+  p (0...prices.size).to_a.combination(2)
+  p (0...prices.size).to_a.combination(2).max_by { |buy, sell|}
   (0...prices.size).to_a.combination(2).max_by { |buy, sell| prices[sell] - prices[buy] }
 end
 p stock_picker([17,3,6,9,15,8,6,1,10])

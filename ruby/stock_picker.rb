@@ -10,3 +10,4 @@ p stock_picker([17,3,6,9,15,8,6,1,10])
 # max_by => finds pair of days that result in max profit by subtracting buy day price from sell day price: prices[sell] - prices[buy]
 # we put prices[sell] first => biggest amount we can sell
 # we put prices[buy] last => lowest amount to buy
+# end

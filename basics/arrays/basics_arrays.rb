@@ -62,7 +62,7 @@ def min_and_max(arr)
 end
 p min_and_max([7, 8, 8, 1, 10])
 
-
+# __________________________________________________________________________________________________________________
 
 # Exercise 4 -: count the occurences
 # Write a method count_occurrences that takes an array and returns a hash with the count of each element.
@@ -74,9 +74,34 @@ def count_occurences(arr)
 
   arr.each do |element|
       occurences[element] = occurences[element] + 1
-    end
   end
   occurences
 end
-
 p count_occurences([0, 0, 2, 2, 5, 7, 0]).inspect
+
+# __________________________________________________________________________________________________________________
+
+# Exercise 5: Remove duplicates
+# Write a method remove_duplicates that takes an array and returns a new array with duplicate elements removed.
+# remove_duplicates([1, 2, 2, 3, 3, 3]) # => [1, 2, 3]
+# remove_duplicates(["a", "b", "a", "c"]) # => ["a", "b", "c"]
+
+def remove_duplicates(data)
+  # we have to iterate over each number in the array
+  # when iterating, we have to check for duplicates
+  # if duplicate is present, it should be deleted
+  # we have to output an array that removed the duplicates
+
+  no_repeat_pls = Hash.new(0)
+  element_1 = 0
+  element_2 = data.length - 1
+
+  data.each do |element|
+    while element_1 == element_2
+      data[element_1], data[element_2] = data[element_1]
+    end
+  end
+  no_repeat_pls
+end
+
+p remove_duplicates([0, 0, 1, 1, 1, 2, 3,4 ,5 ]).inspect

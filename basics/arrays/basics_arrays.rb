@@ -92,16 +92,16 @@ def remove_duplicates(data)
   # if duplicate is present, it should be deleted
   # we have to output an array that removed the duplicates
 
-  no_repeat_pls = Hash.new(0)
-  element_1 = 0
-  element_2 = data.length - 1
+  unique_elements = {}
+  result = []
 
   data.each do |element|
-    while element_1 == element_2
-      data[element_1], data[element_2] = data[element_1]
-    end
+    unique_elements[element] = true   # marking each element. Hash keys must be unique, this automatically handles duplicates
   end
-  no_repeat_pls
-end
 
+  unique_elements.each_key do |key|
+    result << key                     # adding each unique key to the result
+  end
+  result                              # return the array with unique elements
+end
 p remove_duplicates([0, 0, 1, 1, 1, 2, 3,4 ,5 ]).inspect

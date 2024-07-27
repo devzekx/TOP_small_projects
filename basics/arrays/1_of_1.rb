@@ -1,17 +1,10 @@
 # Description: Given a string, determine if all characters are unique (no duplicates).
-
+# expect(unique_characters?("abcdefg")).to be true
+# expect(unique_characters?("hello")).to be false
 def one_of_one(string)
-
-  unique_string = {}
-  result = []
-
-    string.each do |element|
-      unique_string[element] = true
-    end
-  unique_string.each_key do |key|
-    result << key
-  end
-  result.inspect
+  unique_elements = string.downcase.split(//)
+  unique_elements.uniq.size == unique_elements.size
 end
+p one_of_one("abcdefg")
+p one_of_one("hello")
 
-p one_of_one("abcdefg").inspect

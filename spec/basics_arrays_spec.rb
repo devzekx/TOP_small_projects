@@ -18,12 +18,12 @@ RSpec.describe 'Array Basics' do
   describe '#1_of_1' do
     it 'returns true if all characters in the string are unique' do
       # Test cases with unique and non-unique characters
-      expect(unique_characters?("abcdefg")).to be true
-      expect(unique_characters?("hello")).to be false
+      expect(one_of_one("abcdefg")).to be true
+      expect(one_of_one("hello")).to be false
     end
 
     it 'returns true for an empty string' do
-      expect(unique_characters?("")).to be true
+      expect(one_of_one("")).to be true
     end
   end
 
@@ -38,13 +38,13 @@ RSpec.describe 'Array Basics' do
   describe '#el_positivo' do
     xit 'counts the number of positive numbers in the array' do
       # Test cases with varying numbers of positive and negative values
-      expect(count_positive_numbers([1, -2, 3, -4, 5])).to eq(3)
-      expect(count_positive_numbers([-10, -5, 0, 2, 8])).to eq(2)
-      expect(count_positive_numbers([-3, -2, -1])).to eq(0) # No positive numbers
+      expect(el_positivo([1, -2, 3, -4, 5])).to eq(3)
+      expect(el_positivo([-10, -5, 0, 2, 8])).to eq(2)
+      expect(el_positivo([-3, -2, -1])).to eq(0) # No positive numbers
     end
 
     xit 'returns 0 for an empty array' do
-      expect(count_positive_numbers([])).to eq(0)
+      expect(el_positivo([])).to eq(0)
     end
   end
 

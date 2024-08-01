@@ -29,21 +29,21 @@ RSpec.describe 'Array Basics' do
 
 
   describe '#double_up' do
-    xit 'returns a new array with each value doubled' do
+    it 'returns a new array with each value doubled' do
       expect(double_up([1, 2, 3])).to eq([2, 4, 6])
       expect(double_up([-5, 0, 10])).to eq([-10, 0, 20])
     end
   end
 
   describe '#el_positivo' do
-    xit 'counts the number of positive numbers in the array' do
+    it 'counts the number of positive numbers in the array' do
       # Test cases with varying numbers of positive and negative values
       expect(el_positivo([1, -2, 3, -4, 5])).to eq(3)
       expect(el_positivo([-10, -5, 0, 2, 8])).to eq(2)
       expect(el_positivo([-3, -2, -1])).to eq(0) # No positive numbers
     end
 
-    xit 'returns 0 for an empty array' do
+    it 'returns 0 for an empty array' do
       expect(el_positivo([])).to eq(0)
     end
   end

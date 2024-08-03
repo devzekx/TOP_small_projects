@@ -3,8 +3,8 @@ require_relative '../basics/arrays/1_of_1'
 require_relative '../basics/arrays/double_up'
 require_relative '../basics/arrays/el_positivo'
 require_relative '../basics/arrays/even_or_odd'
-require_relative '../basics/arrays/shuffle'
-require_relative '../basics/arrays/the_first_the_last_eternity'
+require_relative '../basics/arrays/shuffled_array'
+require_relative '../basics/arrays/first_and_last'
 
 RSpec.describe 'Array Basics' do
 
@@ -48,17 +48,17 @@ RSpec.describe 'Array Basics' do
     end
   end
 
-  describe '#shuffle_array' do
-    xit 'randomly shuffles the elements in the array' do
+  describe '#shuffled_array' do
+    it 'randomly shuffles the elements in the array' do
       # Test case to check if the shuffled array contains the same elements
       original_array = [1, 2, 3, 4, 5]
-      shuffled_array = shuffle_array(original_array)
+      shuffled_array = shuffled_array(original_array)
       expect(shuffled_array).to include(*original_array) # Check if all original elements are present
       expect(shuffled_array).to_not eq(original_array)  # Check if the order has changed
     end
   end
 
-  describe '#the_first_the_last_eternity' do
+  describe '#first_and_last' do
     xit 'returns a new array with the first and last elements' do
       # Test cases with different array sizes and content types
       expect(first_and_last([1, 2, 3, 4])).to eq([1, 4])
